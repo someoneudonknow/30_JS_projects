@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+    <title>Simple paint app</title>
+</head>
+<body>
+    <div class="tool">
+        <input type="color" class="button-control" name="" id="color">
+        <button id="eraser">
+            <i class='bx bxs-eraser'></i>
+        </button>
+        <button id="decrease">
+            -
+        </button>
+        <span id="size">
+            5
+        </span>
+        <button id="increase">
+            +
+        </button>
+        <a download="example.jpeg" id="save">
+            <i class='bx bxs-save' ></i>
+        </a>
+        <button id="clear">
+            <i class='bx bx-x' ></i>
+        </button>
+    </div>
+    <canvas id="canvas" width="1200px" height="600px" style="border: 3px solid black;"></canvas>
+</body>
+</html>

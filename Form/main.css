@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Cabin:ital,wght@0,430;0,700;1,400;1,500;1,600;1,700&family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Handlee&family=Poppins:wght@100;200;300;400;500;600&family=Radio+Canada&family=Roboto:ital,wght@0,700;0,900;1,500&family=Rokkitt:wght@100;200;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: rgb(38, 145, 217);
+    --error-color: #e74c3c;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+ font-family: 'Poppins';
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+ background: linear-gradient(120deg, rgb(60, 167, 238), rgb(155, 64, 143));
+}
+
+.container {
+    width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.form-control {
+    width: 100%;
+    position: relative;
+    margin: 20px 0;
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #d3d3d3;
+    font-size: 16px;
+}
+
+.line {
+    position: absolute;
+    width: 0%;
+    left: 0;
+    top: 39px;
+    height: 3px;
+    transition: all ease .3s;
+    background-color: var(--primary-color);
+}
+
+.form-control input:focus ~ .line {
+    width: 100%;
+}
+
+.form-control.error small {
+    color: var(--error-color);
+}
+
+.form-control.error input {
+    border-bottom: 3px solid var(--error-color);
+}
+
+.container button {
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 100vmax;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    transition: all ease .3s;
+}
+
+.container button:hover {
+    cursor: pointer;
+    background-color:rgb(8, 96, 154);
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-link a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}

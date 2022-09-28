@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Cabin:ital,wght@0,430;0,700;1,400;1,500;1,600;1,700&family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Handlee&family=Poppins:wght@100;200;300;400;500;600&family=Radio+Canada&family=Roboto:ital,wght@0,700;0,900;1,500&family=Rokkitt:wght@100;200;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right,#ffe000, #799f0c);
+}
+
+.container{
+    width: 400px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.form{
+    padding: 10px 20px 10px 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #aaa
+}
+
+.form input {
+    font-size: 24px;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    color: #444;
+    width: 100%;
+}
+
+.form button {
+    padding: 5px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color:yellowgreen;
+    cursor: pointer;
+}
+
+.todos{
+    background-color: white;
+    color: black;
+    list-style-type: none;
+}
+
+.todos li{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 15px 22px;
+    border-top: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+
+.todos li span {
+    padding-right: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+
+.todos li i {
+    color: #aaa;
+    transform: translateY(47px);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all ease .3s;
+}
+
+.todos li:hover i{
+    cursor: pointer;
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+li span::before {
+    color: black;
+    content: "";
+    background-color: #aaa;
+    position: absolute;
+    bottom: 45%;
+    transform: translateY(50%);
+    height: 2px;
+    width: 0%;
+    transition: all ease .2s;
+}
+
+li.completed span{
+    color: #aaa;
+}
+
+li.completed span::before {
+    width: calc(100% - 10px);
+}

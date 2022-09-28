@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle,  rgba(150,93,233,1) 0%, rgba(99,88,238,1) 100%);
+}
+
+#canvas {
+    margin: 40px auto;
+    background-color: #fff;
+}
+
+.tool{
+    width: 100%;
+    position: relative;
+    background: linear-gradient( 83.2deg,  rgba(150,93,233,1) 10.8%, rgba(99,88,238,1) 94.3% );
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.tool > * {
+    margin: 10px;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    font-size: 23px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    line-height: 35px;
+    background-color: white;
+}
+
+.tool a{
+    margin-left: calc(100vw - 420px);
+}
+
+.active {
+    background-color: red;
+    color: white;
+}

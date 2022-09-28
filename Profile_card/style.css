@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Cabin:ital,wght@0,430;0,700;1,400;1,500;1,600;1,700&family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Handlee&family=Poppins:wght@100;200;300;400;500;600&family=Radio+Canada&family=Roboto:ital,wght@0,700;0,900;1,500&family=Rokkitt:wght@100;200;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange-color: #f2726a;
+}
+
+body {
+    font-family: 'roboto';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to right top, #dfee16, #f1c200, #f99300, #f75f00, #eb1227);
+}
+
+.card{
+    background-color: #242628;
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    transition: all ease .5s;
+}
+
+.card__img{
+    width: 120px;
+    height: 120px;
+    border: 4px solid var(--orange-color);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 25px auto;
+    transition: all ease .3s;
+}
+
+.card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.card__title{
+    font-weight: 700;
+}
+
+.card__job{
+    color: var(--orange-color);
+}
+
+.card .social {
+    margin: 25px 0px 40px;
+}
+
+.card .social a{
+    font-size: 20px;
+    color:white;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.card .social .facebook:hover{
+    color: #1778F2;
+}
+
+.card .social .twitter:hover{
+    color: #1DA1F2;
+}
+
+.card .social .instagram:hover{
+    color: #EE3776;
+}
+
+.card .social .linkedin:hover{
+    color: #2868b2;
+}
+
+.card__button{
+    border: none;
+    width: 150px;
+    height: 50px;
+    font-size: 17px;
+    background-color: transparent;
+    border: 3px solid var(--orange-color);
+    color: white;
+    cursor: pointer;
+    transition: all ease .3s;
+    box-shadow: 0 0 0 0var(--orange-color) inset;
+}
+
+.card__button:hover {
+    box-shadow: inset 150px 0 0 var(--orange-color);
+}
+
+.card:not(.card--full-view) .card__img:hover {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: unset;
+    margin: 0 auto;
+}
+
+/* full-view  */
+
+.card.card--full-view {
+    width: 797px;
+    height: 100%;
+    border-radius: unset;
+    background-color: aliceblue;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+}
+
+.card.card--full-view .card__img {
+    grid-area: profile-img;
+    height: 200px;
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid var(--orange-color);
+    border-radius: 10px;
+    margin: 0 40px 0 20px;
+    display: inline-block;
+}
+
+.card.card--full-view .profile__info {
+    grid-area: profile__info;
+    display: flex;
+    flex-direction: column;
+    background-color: #1D3841;
+    padding: 20px 20px;
+    overflow: hidden;
+    transition: all ease .5s;
+}
+
+.card.card--full-view .img-content--wrapper{
+    display: flex;
+}
+
+.card.card--full-view .name-wrapper {
+    grid-area: name;
+}
+
+.card.card--full-view .card__title,
+.card.card--full-view .card__job{
+    transition: all ease .5s;
+    text-align: left;
+    display: block;
+}
+
+.card.card--full-view .card__title {
+    font-size: 40px;
+    margin-bottom: 13px;
+    color: white;
+}
+
+.card.card--full-view .card__job {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.card.card--full-view .social{
+    display: none;
+}
+
+.profile__info--introduction{
+    display: none;
+}
+
+.card.card--full-view .profile__info--introduction{
+    grid-area: intro;
+    color: white;
+    display: flex;
+    margin-top: 20px;
+}
+
+.profile__info--introduction .about-me,
+.profile__info--introduction .career-passion {
+    text-align: left;
+}
+
+.profile__info--introduction .career-passion{
+    margin-left: 40px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.career-passion p {
+    font-family:'generic';
+    font-weight: 500;
+}
+
+.profile__info--introduction .about-me {
+    font-family:'generic';
+    min-width: 200px;
+}
+
+.about-me span {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.profile__info--introduction .about-me span i{
+    font-size: 13px;
+    margin-right: 7px;
+    color: var(--orange-color);
+}
+
+/* profile-skill  */
+
+.profile__skill {
+    display: none;
+}
+
+.card.card--full-view .profile__skill {
+    display: block;
+    padding: 20px;
+}
+
+.profile__skill .s-1,
+.profile__skill .s-2,
+.profile__skill .s-3 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile__skill .s-1,
+.profile__skill .s-2{
+    margin-bottom: 30px;
+}
+
+.profile__skill .heading-wrapper{
+    width: 300px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.profile__skill .heading-wrapper .number {
+    font-weight: 800;
+    font-size: 50px;
+    color: var(--orange-color);
+    margin: 0 10px 0 5px;
+}
+
+.profile__skill .heading-wrapper .profile__skill--heading {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #1D3841;
+}
+
+.profile__skill--content {
+    text-align: left;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.time {
+    font-family: 'generic';
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color:#1D3841;
+    padding: 3px;
+}
+
+/* score  */
+
+.profile__score {
+    display: none;
+}
+
+.card.card--full-view .profile__score{
+    padding: 30px;
+    background-color: #1D3841;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 33.3333% 33.3333% 33.3333%;
+    grid-template-rows: auto;
+    color: white;
+    width: 100%;
+}
+
+.profile__score--cs,
+.profile__score--el,
+.profile__score--hb{
+    text-align: left;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #223F48;
+}
+
+.profile__score--hb p{
+    padding: 10px 0;
+}
+
+.skill-text,
+.profile__score--hb p {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 400;
+}
+
+.profile__score--heading{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--orange-color);
+}
+
+.star-gold {
+    color: var(--orange-color);
+}
+
+.card.card--full-view button{
+   margin-top: 20px;
+   color: #f2726a;
+}
+
+.card.card--full-view button:hover {
+   color: white;
+}

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Cabin:ital,wght@0,430;0,700;1,400;1,500;1,600;1,700&family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Handlee&family=Poppins:wght@100;200;300;400;500;600&family=Radio+Canada&family=Roboto:ital,wght@0,700;0,900;1,500&family=Rokkitt:wght@100;200;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins',sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hot{
+    background: linear-gradient(to top,rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url(hot.png) no-repeat center/cover;
+}
+
+.hot #weather {
+    background: url(hot.png) no-repeat center/cover;
+}
+
+.cold{
+    background: linear-gradient(to top,rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url(cold.png) no-repeat center/cover;
+}
+
+.cold #weather {
+    background: url(cold.png) no-repeat center/cover;
+}
+
+#weather {
+    min-width: 350px;
+    padding:30px 20px;
+    border-radius: 10px;
+    background: url(cold.png) no-repeat center/cover;
+}
+
+.search{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: rgba(255,255,255,.5);
+    box-shadow: 0px 5px 4px rgba(0,0,0,0.2);
+    transition: all ease-in-out .3s;
+}
+
+.search:focus {
+    border-top-right-radius: unset;
+    border-bottom-left-radius: unset;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(255,255,255,.8);
+}
+
+.content {
+    text-align: center;
+    color: white;
+    margin: 40px 0;
+}
+
+.capital {
+    text-shadow: 3px 2px 0px rgba(0,0,0,0.5);
+}
+
+.capital span {
+    font-size: 35px;
+}
+
+.time{
+    margin-bottom: 20px;
+}
+
+.temperature{
+    border: none;
+    margin: 20px 40px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(255,255,255,.5);
+    font-size: 65px;
+    font-weight: 800;
+    box-shadow: 4px 4px rgba(0,0,0,0.4);
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.short-desc {
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+}
+
+.more-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more-desc span {
+    display: block;
+    padding: 5px;
+}
+
+.more-desc i {
+    margin: 10px 0;
+}

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Cabin:ital,wght@0,430;0,700;1,400;1,500;1,600;1,700&family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Handlee&family=Poppins:wght@100;200;300;400;500;600&family=Radio+Canada&family=Roboto:ital,wght@0,700;0,900;1,500&family=Rokkitt:wght@100;200;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'poppins',sans-serif;
+}
+
+section {
+    height: 100vh;
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right,#4daf54, #3d8880);
+    color: white;
+    padding: 10rem;
+}
+
+#home p {
+    width: 70rem;
+    animation-delay: .2s;
+}
+
+#home h1{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+#home .description {
+    font-size: 2rem;
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background-color: #242628;
+    padding: 2rem;
+    display: inline-block;
+    width: 50rem;
+    border-radius: 1rem;
+    color: white;
+    margin: 0 20px;
+}
+
+.box h1{
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.box .description {
+    font-size: 1.6rem;
+}
+
+#team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgb(1, 124, 44) 50%, white 50%);
+}
+
+.member {
+    margin: 0 2rem;
+    width: 20rem;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .8);
+    border-radius: 1rem;
+}
+
+.member h3{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: rgb(1, 124, 44);
+}
+
+.member .description {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.left-to-right {
+    transform: translateX(-200%);
+}
+
+.left-to-right.start {
+    animation: left-to-right ease 2.5s forwards;
+}
+
+.right-to-left {
+    transform: translateX(200%);
+}
+
+.right-to-left.start {
+    animation: right-to-left ease 2.5s forwards;
+}
+
+.zoom-up {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(.7);
+}
+
+.zoom-up.start {
+   animation: zoom-up ease 1s forwards;
+}
+
+@keyframes left-to-right {
+    0% {
+        transform: translateX(-200%);
+        opacity: 0;
+    } 
+    50% {
+        transform: translateX(20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes right-to-left {
+    0% {
+        transform: translateX(200%);
+        opacity: 0;
+    } 
+    50% {
+        transform: translateX(-20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes zoom-up {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+}
+
+

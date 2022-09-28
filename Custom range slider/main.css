@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Cabin:ital,wght@0,430;0,700;1,400;1,500;1,600;1,700&family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Handlee&family=Poppins:wght@100;200;300;400;500;600&family=Radio+Canada&family=Roboto:ital,wght@0,700;0,900;1,500&family=Rokkitt:wght@100;200;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body h1 {
+    font-size: 3.2rem;
+}
+
+.range{
+    width: 60rem;
+    height: 5rem;
+    border-radius: 100vmax;
+    overflow: hidden;
+    background-color: white;
+    border: 2px solid black;
+    margin-top: 60px;
+    cursor:e-resize;
+} 
+
+.process{
+    height: 100%;
+    width: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to right, rgb(187, 105, 204), rgb(36, 107, 172));;
+}
+
+.process span {
+    font-size: 20px;
+    color: white;
+}
